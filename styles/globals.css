@@ -14,3 +14,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.outter-wrap {
+  height: 100vh;
+  display: flex;
+  background-color: #ddd;
+  align-items: center;
+  justify-content: center;
+  padding: 200px;
+}
+
+.box-container {
+  background-color: #fff;
+  width: 100%;
+  padding: 100px;
+}
