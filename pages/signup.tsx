@@ -19,7 +19,7 @@ export default function SignUp(): JSX.Element {
             const result = await signInWithGoogle()
             if(result.additionalUserInfo?.isNewUser) {
                 router.push('/chat')
-                Notiflix.Notify.success('Success message text');
+                Notiflix.Notify.success('Sign Up is successful!');
             } else {
                 router.push('/login')
                 Notiflix.Notify.info('Account already exists! Please use the login');
