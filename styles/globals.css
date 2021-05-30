@@ -29,3 +29,13 @@ a {
   width: 100%;
   padding: 100px;
 }
+
+@media (max-width: 1024px) {
+  .outter-wrap {
+    padding: 20px;
+  }
+
+  .box-container {
+    padding: 20px;
+  }
+}
