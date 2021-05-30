@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { auth, db } from '../services/firebase'
+import { db } from '../services/firebase'
 
 export default function Chat(): JSX.Element {
     const [chats, setChats] = useState([]);
@@ -19,13 +19,11 @@ export default function Chat(): JSX.Element {
                 const chatData = await db.ref('chats/').on('value', snapshot => {
                     let chatsArr: ChatData[] = []
                     snapshot.forEach((snap) => {
-                        console.log(snap)
                         chatsArr.push(snap.val())
                     })
                     setChats(chatsArr);
                 })
             } catch (error) {
-                console.log(error);
                 setReadError(error)
             } finally {
                 console.log("done")
