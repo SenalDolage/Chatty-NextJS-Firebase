@@ -86,6 +86,7 @@ export default function Chat(): JSX.Element {
                                     !form.isFieldsTouched(true) ||
                                     !!form.getFieldsError().filter(({ errors }) => errors.length).length
                                 }
+                                style={{float: 'right'}}
                             >
                                 Send
                             </Button>
